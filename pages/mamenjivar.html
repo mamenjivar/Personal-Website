@@ -20,7 +20,7 @@
             .navbar {
                 padding: 0;
             }
-
+ 
             .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
                 background: grey;
             }
@@ -31,6 +31,7 @@
 </head>
 <body>
      
+    <div id="body">
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
         <div class="container">
@@ -81,15 +82,40 @@
     </div>
 
     <!-- Body of webpage -->
+    <!-- Education -->
     <div class="container">
         <div class="row content">
-            <div class="col-md-6  border text-center"> <!-- text center -->
+            <div class="col-md-6 text-center border-bottom border-danger"> <!-- text center -->
                 <h1>Cal Poly Pomona</h1>
                 <br>
                 <p>Class of 2019</p>
             </div>
-            <div class="col-md-6 border border-danger d-flex justify-content-center">
+            <div class="col-md-6 border-bottom border-danger d-flex justify-content-center">
                 <i class="fas fa-graduation-cap fa-9x"></i>
+            </div>
+        </div>
+
+        <!-- Occupation -->
+        <div class="row content">
+            <div class="col-md-6 border-bottom border-success text-center pt-3 pb-3">
+                <i class="fas fa-briefcase fa-9x"></i>
+            </div>
+            <div class="col-md-6 border-bottom border-success text-center pt-3 pb-3">
+                <h1>Occupation</h1>
+                <br>
+                <p>Recreation Technician - BRIC</p>
+            </div>
+        </div>
+
+        <!-- Programming Languages -->
+        <div class="row content">
+            <div class="col-md-6 text-center border-bottom border-danger pt-3 pb-3">
+                <h1>Languages</h1>
+                <br>
+                <p>Java, HTML, CSS, JavaScript</p>
+            </div>
+            <div class="col-md-6 border-bottom border-danger text-center pt-3 pb-3">
+                <i class="fas fa-terminal fa-9x"></i>
             </div>
         </div>
     </div>
@@ -120,8 +146,6 @@
             </div>
         </div>
     </nav>
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
