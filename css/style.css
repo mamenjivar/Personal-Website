@@ -8,3 +8,10 @@
     width: 115px;
     height: 32px;
 }
+
+/* fix it so footer can be visible and body of text can be visible as well */
+#body {
+    margin-bottom: 50px;
+    min-height: 50px;
+    clear: both;
+}
