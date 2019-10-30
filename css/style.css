@@ -1,17 +1,17 @@
+/* edits the linkedin logo */
 #linkedin {
     width: 100px;
     height: 27px;
 }
 
+/* edits the instagram logo */
 #insta {
     background-color: white;
     width: 115px;
     height: 32px;
 }
 
-/* fix it so footer can be visible and body of text can be visible as well */
-#body {
-    margin-bottom: 50px;
-    min-height: 50px;
-    clear: both;
+/* will remove the blue color for it being a link */
+a i {
+    color: black;
 }
