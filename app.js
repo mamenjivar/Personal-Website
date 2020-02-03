@@ -45,6 +45,17 @@ app.get('/home', function(req, res){
     res.render('home');
 });
 
+// BLOG ROUTE
+app.get('/blog', function(req, res){
+    Blog.find({}, function(err, blog){
+        if(err){
+            console.log('ERROR!');
+        } else {
+            res.render('blog', {blog: blog});
+        }
+    });
+});
+
 // LOCALHOST
 app.listen(3000, function(){
     console.log('SERVER IS RUNNING!');
