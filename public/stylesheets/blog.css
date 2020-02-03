@@ -1,0 +1,11 @@
+.container.main {
+    margin-top: 5.0em;
+}
+
+.noHover{
+    pointer-events: none;
+}
+
+#delete {
+    display: inline;
+}

@@ -1,0 +1,25 @@
+<%- include('partials/headerBlog') %>
+
+<div class='ui main text container'>
+    <div class='ui huge header center aligned'>All Blogs</div>
+    <div class='ui top attached segment'>
+        <div class='ui divided items'>
+            <% blog.forEach(function(blog) { %>
+                <div class='item'>
+                    <div class='content'>
+                        <h1><i class='code icon'></i><a class='header' href='/blog/<%= blog._id%>'><%= blog.title %></a></h1>
+                        <div class='meta'>
+                            <span><i class='clock icon'></i><%= blog.created.toDateString() %></span>
+                        </div>
+                        <h3><i class='user icon'></i> <%= blog.author %></h3>
+                        <div class='description'>
+                            <p><i class='file icon'></i><%= blog.body.substring(0, 100) %>...</p>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footerBlog') %>
