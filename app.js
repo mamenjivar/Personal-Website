@@ -3,6 +3,7 @@ var app            = express();
 var bodyParser     = require('body-parser');
 var mongoose       = require('mongoose');
 var methodOverride = require('method-override');
+var Blog           = require('./models/blog'); // schema moved to its own page
 
 // connect mongoose with database
 mongoose.connect('mongodb://localhost/personal-blog', {
@@ -15,18 +16,6 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
-
-// MONGOOSE SCHEMA - DATABASE FORMAT
-var blogSchema = new mongoose.Schema({
-    title: String,
-    author: String,
-    body: String,
-    created: {
-        type: Date,
-        default: Date.now
-    }
-});
-var Blog = mongoose.model('Blog', blogSchema);
 
 // MANUALLY PUSH A NEW BLOG TO POPULATE DB
 // Blog.create({
