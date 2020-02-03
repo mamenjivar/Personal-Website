@@ -1,0 +1,123 @@
+<%- include('partials/header'); %>
+
+<!-- jumbotron -->
+<div class="jumbotron">
+    <section class="container">
+        <div class="row content">
+            <div class="col-md-6 order-2 order-md-1 text-center">
+                <h1 class="display-4">Miguel Menjivar</h1>
+                <hr class="sm-6">
+                <h1>COMPUTER SCIENCE</h1>
+            </div>
+            <div class="col-md-6 order-1 order-md-2">
+                <h1>IMAGE WILL GO HERE!</h1>
+            </div>
+        </div>
+        <!-- 
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+                featured content or information.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
+    </section>
+</div>
+<!-- Body of webpage -->
+<div class="container">
+    <!-- About Me -->
+    <div class="row content border-bottom border-danger">
+        <div class="col-md-6 text-center pt-5 order-2 order-md-1">
+            <h1>About Me</h1>
+        </div>
+        <div class="col-md-6 text-center pb-3 order-1 order-md-2">
+            <a href="about.html"><i class="fas fa-user-tie fa-9x"></i></a>
+        </div>
+    </div>
+
+    <!-- Education -->
+    <div class="row content border-bottom border-danger">
+        <div class="col-md-6 d-flex justify-content-center">
+            <i class="fas fa-graduation-cap fa-9x"></i>
+        </div>
+        <div class="col-md-6 text-center pt-4">
+            <!-- text center -->
+            <h1>Cal Poly Pomona</h1>
+            <br>
+            <!-- <p>Class of 2019</p> -->
+        </div>
+    </div>
+
+    <!-- Occupation -->
+    <div class="row content border-bottom border-success">
+        <div class="col-md-6 text-center pt-4 pb-2 order-2 order-md-1">
+            <h1>Occupation</h1>
+            <br>
+            <p>Recreation Technician - BRIC</p>
+        </div>
+        <div class="col-md-6 text-center pt-3 pb-3 order-1 order-md-2">
+            <i class="fas fa-briefcase fa-9x"></i>
+        </div>
+    </div>
+
+    <!-- Resume -->
+    <div class="row content border-bottom border-danger">
+        <div class="col-md-6 d-flex justify-content-center pt-3 pb-3">
+            <i class="fas fa-file-alt fa-9x"></i>
+        </div>
+        <div class="col-md-6 text-center pt-5">
+            <!-- text center -->
+            <h1>Resume</h1>
+        </div>
+    </div>
+
+    <!-- Follow me Social Media -->
+    <div class="row content">
+        <div class="col-md-12 text-center pt-3">
+            <h1>Follow Me on Social Media!!</h1>
+        </div>
+    </div>
+    <div class="row content">
+        <div class="col-md-3 text-center">
+            <i class="fas fa-angle-double-down fa-9x"></i>
+        </div>
+        <div class="col-md-3 text-center">
+            <i class="fas fa-angle-double-down fa-9x"></i>
+        </div>
+        <div class="col-md-3 text-center">
+            <i class="fas fa-angle-double-down fa-9x"></i>
+        </div>
+        <div class="col-md-3 text-center">
+            <i class="fas fa-angle-double-down fa-9x"></i>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<!-- fixed-bottom not fixed anymore -->
+<nav class="navbar navbar-light bg-primary">
+    <div class="container border-danger p-3">
+        <!-- twitter handle -->
+        <div class="col-3 text-center">
+            <a href="https://twitter.com/miggsception?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+                data-show-count="false" data-size="large">Follow @miggsception</a>
+        </div>
+        <!-- github handle -->
+        <div class="col-3 text-center">
+            <a class="github-button" href="https://github.com/mamenjivar" data-size="large"
+                aria-label="Follow @mamenjivar on GitHub">Follow @mamenjivar</a>
+        </div>
+        <!-- linkedIn handle -->
+        <div class="col-3 text-center">
+            <a href="https://www.linkedin.com/in/mamenjivar/">
+                <img src="/images/lifi.png" alt="linkedin follow link" id="linkedin">
+                
+            </a>
+        </div>
+        <div class="col-3 text-center">
+            <a href="https://instagram.com/miggy223">
+                <img src="/images/instagram-follow-button-png.png" alt='Instagram follow link' id="insta">
+            </a>
+        </div>
+    </div>
+</nav>
+
+<%- include('partials/footer'); %>
