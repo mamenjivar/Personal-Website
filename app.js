@@ -44,8 +44,7 @@ app.get('/api', function(req, res){
 
 /////////////////////////// MOVIE API ROUTES
 app.get('/api/movieapi', function(req, res){
-    var moviekey = '&apikey=twdb';
-    res.render('movieapi', {key: moviekey});
+    res.render('movieapi');
 });
 
 // MOVIE RESULT ROUTE
@@ -56,7 +55,11 @@ app.get('/api/movieapi/result', function(req, res){
     request(url, function(err, response, body){
         if(!err && response.statusCode == 200){
             var data = JSON.parse(body);
-            res.render('result', {data: data});
+            // console.log(JSON.parse(body));
+            res.render('result', {
+                data: data,
+                movieName: query
+            });
         }
     });
 });
