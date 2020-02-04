@@ -4,7 +4,7 @@ var bodyParser     = require('body-parser');
 var mongoose       = require('mongoose');
 var methodOverride = require('method-override');
 var request        = require('request');
-var dotenv         = require('dotenv').config();
+                     require('dotenv').config();
 
 var Blog           = require('./models/blog'); // schema moved to its own page
 
