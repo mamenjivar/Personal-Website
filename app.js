@@ -42,12 +42,13 @@ app.get('/api', function(req, res){
     res.render('api');
 });
 
-// MOVIE API ROUTE HOME
+/////////////////////////// MOVIE API ROUTES
 app.get('/api/movieapi', function(req, res){
     var moviekey = '&apikey=twdb';
     res.render('movieapi', {key: moviekey});
 });
 
+// MOVIE RESULT ROUTE
 app.get('/api/movieapi/result', function(req, res){
     var query = req.query.search;
     var url = 'http://omdbapi.com/?s=' + query + process.env.MOVIE_DB;
