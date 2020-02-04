@@ -1,0 +1,27 @@
+<%- include('partials/headerMovieApi') %>
+
+<div class='ui container'>
+    <h1>Results <%=  %></h1> 
+    <div class='ui three column grid'>
+        <% data['Search'].forEach(function(movie) { %>
+        <div class='ui four column grid'>
+            <div class='ui card'>
+                <div class='image'>
+                    <img src='<%= movie['Poster'] %>'>
+                </div>
+                <div class='content'>
+                    <a class='header'><%= movie['Title'] %></a>
+                    <div class='meta'>
+                        <span class='date'><%= movie['Type'] %></span>
+                    </div>
+                    <div class='description'>
+                        <p><%= movie['Plot'] %></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</div>
+
+<%- include('partials/footer') %>

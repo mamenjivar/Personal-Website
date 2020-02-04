@@ -3,6 +3,7 @@ var app            = express();
 var bodyParser     = require('body-parser');
 var mongoose       = require('mongoose');
 var methodOverride = require('method-override');
+var request        = require('request');
 var Blog           = require('./models/blog'); // schema moved to its own page
 
 // connect mongoose with database
@@ -34,6 +35,29 @@ app.get('/home', function(req, res){
     res.render('home');
 });
 
+// API ROUTE
+app.get('/api', function(req, res){
+    res.render('api');
+});
+
+// MOVIE API ROUTE HOME
+app.get('/api/movieapi', function(req, res){
+    var moviekey = '&apikey=twdb';
+    res.render('movieapi', {key: moviekey});
+});
+
+app.get('/api/movieapi/result', function(req, res){
+    var query = req.query.search;
+    var url = 'http://omdbapi.com/?s=' + query + '';
+
+    request(url, function(err, response, body){
+        if(!err && response.statusCode == 200){
+            var data = JSON.parse(body);
+            res.render('result', {data: data});
+        }
+    });
+});
+
 /////////////////// BLOG ROUTES
 
 // BLOG ROUTE
@@ -54,7 +78,7 @@ app.post('/blog', function(req, res){
         if(err){
             res.render('new');
         } else{
-            res.redirect('/blog');
+            res.redirect('blog');
         }
     });
 });
@@ -90,9 +114,9 @@ app.get('/blog/:id/edit', function(req, res){
 app.put('/blog/:id', function(req, res){
     Blog.findByIdAndUpdate(req.params.id, req.body.blog, function(err, updatedBlog){
         if(err){
-            res.redirect('/blog');
+            res.redirect('blog');
         } else {
-            res.redirect('/blog' + req.params.id);
+            res.redirect('blog' + req.params.id);
         }
     });
 });
@@ -101,9 +125,9 @@ app.put('/blog/:id', function(req, res){
 app.delete('/blog/:id', function(req, res){
     Blog.findByIdAndRemove(req.params.id, function(err){
         if(err){
-            res.redirect('/blog');
+            res.redirect('blog');
         } else {
-            res.redirect('/blog');
+            res.redirect('blog');
         }
     });
 });
