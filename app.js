@@ -4,6 +4,8 @@ var bodyParser     = require('body-parser');
 var mongoose       = require('mongoose');
 var methodOverride = require('method-override');
 var request        = require('request');
+var dotenv         = require('dotenv').config();
+
 var Blog           = require('./models/blog'); // schema moved to its own page
 
 // connect mongoose with database
@@ -48,7 +50,7 @@ app.get('/api/movieapi', function(req, res){
 
 app.get('/api/movieapi/result', function(req, res){
     var query = req.query.search;
-    var url = 'http://omdbapi.com/?s=' + query + '';
+    var url = 'http://omdbapi.com/?s=' + query + process.env.MOVIE_DB;
 
     request(url, function(err, response, body){
         if(!err && response.statusCode == 200){
