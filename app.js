@@ -44,7 +44,7 @@ app.get('/api', function(req, res){
 
 /////////////////////////// MOVIE API ROUTES
 app.get('/api/movieapi', function(req, res){
-    res.render('movieapi');
+    res.render('movie01/movieapi');
 });
 
 // MOVIE RESULT ROUTE
@@ -56,7 +56,7 @@ app.get('/api/movieapi/result', function(req, res){
         if(!err && response.statusCode == 200){
             var data = JSON.parse(body);
             // console.log(JSON.parse(body));
-            res.render('result', {
+            res.render('movie01/result', {
                 data: data,
                 movieName: query
             });
@@ -72,7 +72,7 @@ app.get('/blog', function(req, res){
         if(err){
             console.log('ERROR!');
         } else {
-            res.render('blog', {blog: blog});
+            res.render('blog/blog', {blog: blog});
         }
     });
 });
@@ -82,7 +82,7 @@ app.get('/blog', function(req, res){
 app.post('/blog', function(req, res){
     Blog.create(req.body.blog, function(err, newBlog){
         if(err){
-            res.render('new');
+            res.render('blog/new');
         } else{
             res.redirect('blog');
         }
@@ -91,7 +91,7 @@ app.post('/blog', function(req, res){
 
 // NEW ROUTE
 app.get('/blog/new', function(req, res){
-    res.render('new');
+    res.render('blog/new');
 });
 
 // SHOW ROUTE
@@ -100,7 +100,7 @@ app.get('/blog/:id', function(req, res){
         if(err){
             res.redirect('/blog');
         } else {
-            res.render('show', {blog: foundBlog});
+            res.render('blog/show', {blog: foundBlog});
         }
     });
 });
@@ -111,7 +111,7 @@ app.get('/blog/:id/edit', function(req, res){
         if(err){
             res.redirect('/blog');
         } else {
-            res.render('edit', {blog: foundBlog});
+            res.render('blog/edit', {blog: foundBlog});
         }
     });
 });
@@ -120,9 +120,9 @@ app.get('/blog/:id/edit', function(req, res){
 app.put('/blog/:id', function(req, res){
     Blog.findByIdAndUpdate(req.params.id, req.body.blog, function(err, updatedBlog){
         if(err){
-            res.redirect('blog');
+            res.redirect('/blog');
         } else {
-            res.redirect('blog' + req.params.id);
+            res.redirect('/blog/' + req.params.id);
         }
     });
 });
@@ -131,9 +131,9 @@ app.put('/blog/:id', function(req, res){
 app.delete('/blog/:id', function(req, res){
     Blog.findByIdAndRemove(req.params.id, function(err){
         if(err){
-            res.redirect('blog');
+            res.redirect('/blog');
         } else {
-            res.redirect('blog');
+            res.redirect('/blog');
         }
     });
 });

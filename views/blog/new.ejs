@@ -1,19 +1,19 @@
-<%- include('partials/headerBlog') %>
+<%- include('../partials/headerBlog') %>
 
 <div class='ui main container'>
-    <div class='ui huge header'>Edit <%= blog.title %></div>
-    <form class='ui form' action='/blog/<%= blog._id%>?_method=PUT' method='POST'>
+    <div class='ui huge header'>Post Blog</div>
+    <form class='ui form' action='/blog' method='POST'>
         <div class='field'>
             <label>Blog Title: </label>
-            <input type='text' name='blog[title]' value='<%= blog.title %>'>
+            <input type='text' name='blog[title]' placeholder='Blog Name'>
         </div>
         <div class='field'>
             <label>Blog Author Name: </label>
-            <input type='text' name='blog[author]' value='<%= blog.author %>'>
+            <input type='text' name='blog[author]' placeholder='Author'>
         </div>
         <div class='field'>
             <label>Blog Content: </label>
-            <textarea name='blog[body]'><%= blog.body %></textarea>
+            <textarea name='blog[body]'></textarea>
         </div>
         <button class='ui primary button' type='submit'>
             Submit
@@ -24,4 +24,4 @@
     </form>
 </div>
 
-<%- include('partials/footerBlog') %>
+<%- include('../partials/footerBlog') %>
