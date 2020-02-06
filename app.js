@@ -4,6 +4,8 @@ var bodyParser     = require('body-parser');
 var mongoose       = require('mongoose');
 var methodOverride = require('method-override');
 var request        = require('request');
+var fs             = require('fs');
+
                      require('dotenv').config();
 
 var Blog           = require('./models/blog'); // schema moved to its own page
@@ -40,6 +42,14 @@ app.get('/home', function(req, res){
 // API ROUTE
 app.get('/api', function(req, res){
     res.render('api');
+});
+
+app.get('/resume', function(req, res){
+    var resume = 'public/Website-Resume.pdf';
+    fs.readFile(resume, function(err, data){
+        res.contentType('application/pdf');
+        res.send(data);
+    });
 });
 
 /////////////////////////// MOVIE API ROUTES
