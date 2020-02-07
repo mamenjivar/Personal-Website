@@ -12,8 +12,8 @@ var fs             = require('fs');
 var Blog           = require('./models/blog'); 
 
 // requiring routes
-var indexRoutes = require('./routes/index');
-var blogRoutes = require('./routes/blog');
+var indexRoutes   = require('./routes/index');
+var blogRoutes    = require('./routes/blog');
 var movie01Routes = require('./routes/movie01');
 
 // connect mongoose with database
