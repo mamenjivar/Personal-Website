@@ -42,6 +42,6 @@ app.use(movie01Routes);
 // });
 
 // LOCALHOST
-app.listen(3000, function(){
-    console.log('SERVER IS RUNNING!');
-});
+// app.listen(3000, function(){
+//     console.log('SERVER IS RUNNING!');
+// });
