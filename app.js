@@ -17,7 +17,8 @@ var blogRoutes    = require('./routes/blog');
 var movie01Routes = require('./routes/movie01');
 
 // connect mongoose with database
-mongoose.connect('mongodb://localhost/personal-blog', {
+// mongoose.connect('mongodb://localhost/personal-blog', {
+mongoose.connect('mongodb+srv://' + process.env.MONGODB_ATLAS + '@personal-blog-4odat.mongodb.net/test?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false
