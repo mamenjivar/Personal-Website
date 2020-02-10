@@ -12,11 +12,17 @@ router.get('/home', function (req, res) {
     res.render('home');
 });
 
+// ABOUT ROUTE
+router.get('/home/about', function(req, res){
+    res.render('about');
+});
+
 // API ROUTE
 router.get('/api', function (req, res) {
     res.render('api');
 });
 
+// to display resume for people to see and download
 router.get('/resume', function (req, res) {
     var resume = 'public/Website-Resume.pdf';
     fs.readFile(resume, function (err, data) {
