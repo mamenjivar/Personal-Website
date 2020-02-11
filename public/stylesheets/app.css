@@ -15,6 +15,7 @@ a i {
     display: inline;
 }
 
+/* removes link color */
 li a {
     color: black;
 }
