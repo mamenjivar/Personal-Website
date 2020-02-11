@@ -6,20 +6,21 @@
     background: grey;
 }
 
-/* edits the linkedin logo */
-#linkedin {
-    width: 100px;
-    height: 27px;
-}
-
-/* edits the instagram logo */
-#insta {
-    background-color: white;
-    width: 115px;
-    height: 32px;
-}
-
 /* will remove the blue color for it being a link */
 a i {
     color: black;
+}
+
+.icon-right {
+    display: inline;
+}
+
+li a {
+    color: black;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

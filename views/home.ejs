@@ -13,32 +13,51 @@
                 <h1>IMAGE WILL GO HERE!</h1>
             </div>
         </div>
-        <!-- 
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-                featured content or information.</p>
-            <hr class="my-4">
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a> -->
     </section>
 </div>
+
 <!-- Body of webpage -->
 <div class="container">
-    <!-- About Me -->
-    <div class="row content border-bottom border-danger">
-        <div class="col-md-6 text-center pt-5 order-2 order-md-1">
-            <h1>About Me</h1>
+    <div class='row'>
+        <!-- SOCIAL MEDIA -->
+        <div class='col-md-3 d-none d-md-block d-md-none'>
+            <ul class="list-group">
+                <li class="list-group-item disabled text-center" aria-disabled="true">Social Media</li>
+                <li class="list-group-item">
+                    <a class='text-decoration-none' href='https://github.com/mamenjivar' target='_blank'>
+                        Github <i class="fab fa-github pull-right"></i>
+                    </a>
+                </li>
+                <li class='list-group-item'>
+                    <a class='text-decoration-none' href='https://www.linkedin.com/in/mamenjivar/' target='_blank'>
+                        LinkedIn <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+                <li class='list-group-item'>
+                    <a class='text-decoration-none' href='https://instagram.com/miggy223' target='_blank'>
+                        Instagram <i class='fab fa-instagram'></i>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="col-md-6 text-center pb-3 order-1 order-md-2">
-            <a href="/home/about"><i class="fas fa-user-tie fa-9x"></i></a>
-        </div>
+
+        <!-- About Me -->
+            <div class="col-md-4 text-center pt-5 order-2 order-md-1 border-bottom border-success">
+                <h1>About Me</h1>
+            </div>
+            <div class="col-md-5 text-center  order-1 order-md-2 border-bottom border-success">
+                <a href="/home/about"><i class="fas fa-user-tie fa-9x"></i></a>
+            </div>
     </div>
 
-    <!-- Education -->
-    <div class="row content border-bottom border-danger">
-        <div class="col-md-6 d-flex justify-content-center">
+    <div class='row'>
+        <div class='col-md-3'>
+        </div>
+        <!-- Education -->
+        <div class="col-md-4 d-flex justify-content-center border-bottom border-success">
             <i class="fas fa-graduation-cap fa-9x"></i>
         </div>
-        <div class="col-md-6 text-center pt-4">
+        <div class="col-md-5 text-center border-bottom border-success">
             <!-- text center -->
             <h1>Cal Poly Pomona</h1>
             <br>
@@ -46,79 +65,52 @@
         </div>
     </div>
 
-    <!-- Occupation -->
-    <div class="row content border-bottom border-success">
-        <div class="col-md-6 text-center pt-4 pb-2 order-2 order-md-1">
-            <h1>Occupation</h1>
-            <br>
-            <p>Recreation Technician - BRIC</p>
+    <div class='row'>
+        <div class='col-md-3'>
         </div>
-        <div class="col-md-6 text-center pt-3 pb-3 order-1 order-md-2">
-            <i class="fas fa-briefcase fa-9x"></i>
-        </div>
+        <!-- Occupation -->
+            <div class="col-md-4 text-center pt-4 pb-2 order-2 order-md-1 border-bottom border-success">
+                <h1>Occupation</h1>
+                <br>
+                <p>Recreation Technician - BRIC</p>
+            </div>
+            <div class="col-md-5 text-center pt-3 pb-3 order-1 order-md-2 border-bottom border-success">
+                <i class="fas fa-briefcase fa-9x"></i>
+            </div>
     </div>
 
-    <!-- Resume -->
-    <div class="row content border-bottom border-danger">
-        <div class="col-md-6 d-flex justify-content-center pt-3 pb-3">
-            <!-- work on it to see if can upload resume here -->
-           <a href='/resume' target='_blank'><i class="fas fa-file-alt fa-9x"></i></a>
+    <div class='row'>
+        <div class='col-md-3'>
         </div>
-        <div class="col-md-6 text-center pt-5">
-            <!-- text center -->
-            <h1>Resume</h1>
-        </div>
+        <!-- Resume -->
+            <div class="col-md-4 d-flex justify-content-center pt-3 pb-3">
+                <a href='/resume' target='_blank'><i class="fas fa-file-alt fa-9x"></i></a>
+            </div>
+            <div class="col-md-5 text-center pt-5">
+                <h1>Resume</h1>
+            </div>
     </div>
 
-    <!-- Follow me Social Media -->
-    <div class="row content">
-        <div class="col-md-12 text-center pt-3">
-            <h1>Follow Me on Social Media!!</h1>
-        </div>
-    </div>
-    <div class="row content">
-        <div class="col-md-3 text-center">
-            <i class="fas fa-angle-double-down fa-9x"></i>
-        </div>
-        <div class="col-md-3 text-center">
-            <i class="fas fa-angle-double-down fa-9x"></i>
-        </div>
-        <div class="col-md-3 text-center">
-            <i class="fas fa-angle-double-down fa-9x"></i>
-        </div>
-        <div class="col-md-3 text-center">
-            <i class="fas fa-angle-double-down fa-9x"></i>
-        </div>
+    <!-- SOCIAL MEDIA ON SMALL SCREENS ONLY-->
+    <div class='col d-block d-md-none pb-3'>
+        <ul class="list-group">
+            <li class="list-group-item disabled text-center" aria-disabled="true">Social Media</li>
+            <li class="list-group-item">
+                <a class='text-decoration-none' href='https://github.com/mamenjivar' target='_blank'>
+                    Github <i class="fab fa-github pull-right"></i>
+                </a>
+            </li>
+            <li class='list-group-item'>
+                <a class='text-decoration-none' href='https://www.linkedin.com/in/mamenjivar/' target='_blank'>
+                    LinkedIn <i class="fab fa-linkedin-in"></i>
+                </a>
+            </li>
+            <li class='list-group-item'>
+                <a class='text-decoration-none' href='https://instagram.com/miggy223' target='_blank'>
+                    Instagram <i class='fab fa-instagram'></i>
+                </a>
+            </li>
+        </ul>
     </div>
 </div>
-
-<!-- Footer -->
-<!-- fixed-bottom not fixed anymore -->
-<nav class="navbar navbar-light bg-primary">
-    <div class="container border-danger p-3">
-        <!-- twitter handle -->
-        <div class="col-3 text-center">
-            <a href="https://twitter.com/miggsception?ref_src=twsrc%5Etfw" class="twitter-follow-button"
-                data-show-count="false" data-size="large">Follow @miggsception</a>
-        </div>
-        <!-- github handle -->
-        <div class="col-3 text-center">
-            <a class="github-button" href="https://github.com/mamenjivar" data-size="large"
-                aria-label="Follow @mamenjivar on GitHub">Follow @mamenjivar</a>
-        </div>
-        <!-- linkedIn handle -->
-        <div class="col-3 text-center">
-            <a href="https://www.linkedin.com/in/mamenjivar/">
-                <img src="/public/images/lifi.png" alt="linkedin follow link" id="linkedin">
-                
-            </a>
-        </div>
-        <div class="col-3 text-center">
-            <a href="https://instagram.com/miggy223">
-                <img src="/public/images/instagram-follow-button-png.png" alt='Instagram follow link' id="insta">
-            </a>
-        </div>
-    </div>
-</nav>
-
 <%- include('partials/footer'); %>
