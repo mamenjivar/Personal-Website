@@ -1,12 +1,13 @@
-var express        = require('express');
-var app            = express();
-var bodyParser     = require('body-parser');
-var mongoose       = require('mongoose');
-var methodOverride = require('method-override');
-var request        = require('request');
-var fs             = require('fs');
+const express        = require('express');
+const bodyParser     = require('body-parser');
+const methodOverride = require('method-override');
+const connectDB      = require('./config/db');
+                    //    require("dotenv").config();
 
-                     require('dotenv').config();
+const app = express();
+
+// connect DB
+connectDB();
 
 // Schemas for DB
 var Blog           = require('./models/blog'); 
@@ -15,14 +16,6 @@ var Blog           = require('./models/blog');
 var indexRoutes   = require('./routes/index');
 var blogRoutes    = require('./routes/blog');
 var movie01Routes = require('./routes/movie01');
-
-// connect mongoose with database
-// mongoose.connect('mongodb://localhost/personal-blog', {
-mongoose.connect('mongodb+srv://' + process.env.MONGODB_ATLAS + '@personal-blog-4odat.mongodb.net/test?retryWrites=true&w=majority', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false
-});
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
