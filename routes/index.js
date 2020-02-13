@@ -23,6 +23,11 @@ router.get('/api', function (req, res) {
     res.render('api');
 });
 
+// PROJECTS ROUTE
+router.get('/projects', function(req, res){
+    res.render('projects');
+});
+
 // GITHUB ROUTE
 // one user only
 router.get('/api/github', function(req, res){
