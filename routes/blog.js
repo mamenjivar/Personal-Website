@@ -3,7 +3,12 @@ var router = express.Router();
 
 var Blog = require('../models/blog');
 
-/////////////////// BLOG ROUTES
+// MANUALLY PUSH A NEW BLOG TO POPULATE DB
+// Blog.create({
+//     title: 'Test Blog',
+//     author: 'Miggsception',
+//     body: 'THIS IS THE FIRST POST TO TEST LOCAL DB WORKS' 
+// });
 
 // BLOG ROUTE
 router.get('/blog', function (req, res) {
