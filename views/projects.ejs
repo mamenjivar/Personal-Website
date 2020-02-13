@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+
+<!-- put them in rows -->
+<div class='container'>
+    <h1 class='pt-2 text-center'>Projects</h1>
+    <p class='text-center'>This page will list the various projects I've worked on</p>
+</div>
+
+<div class='container'>
+    <div class='row py-3 d-flex justify-content-around'>
+
+        <!-- Movie Tracker Class Group Project -->
+        <div class='p-0 card-padding card col-md-3' style='width: 18rem'>
+            <img src='/images/mediaTracker01.png' class='card-img-top'
+                alt='Media-tracker image'>
+            <div class='card-body'>
+                <h5 class='card-title text-center'>Media Tracker</h5>
+                <p class='card-text'>The Movie Tracking Database built for a group project</p>
+                <a href='http://www.themediatracker.com/#/' target='_blank' class='btn btn-primary'>Try it Out</a>
+            </div>
+        </div>
+
+        <!-- Blog page -->
+        <div class='p-0 card-padding card col-md-3' style="width: 18rem">
+            <img src='/images/blogme.png' class='card-img-top' alt='...'>
+            <div class='card-body'>
+                <h5 class='card-title text-center'>BlogMe</h5>
+                <p class='card-text'>A simple blogging page</p>
+                <a href='/blog' target='_blank' class='btn btn-primary'>Try it Out</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %>
