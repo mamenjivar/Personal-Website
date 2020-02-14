@@ -51,6 +51,7 @@ router.get('/api/github', function(req, res){
             }
 
             var data = JSON.parse(body);
+            // console.log(JSON.parse(body));
 
             res.render('github', {
                 gitData: data 

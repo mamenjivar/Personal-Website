@@ -1,3 +1,30 @@
-<h1>This is the github repo page</h1>
+<%- include('partials/header'); %>
 
-<h2>This is: <%= gitData[1].name %></h2>
+<!-- about page section -->
+<div class='container text-center'>
+    <h1>Github Repository Page</h1>
+    <p>In this page, you will see the various projects in this particular repository</p>
+    <!-- ADD BUTTON TO GO DIRECTLY TO PROFILE  -->
+</div>
+
+<!-- long cards with repos -->
+<!-- LOOPS 10 ONLY -->
+<div class='container'>
+    <div class='row d-flex justify-content-around'>
+        <!-- let = var -->
+        <% for(let i = 0; i < 5; i++) { %>
+        <div class='col-md-5 pb-3'>
+            <div class="card">
+                <div class="card-header">
+                    Repository <%= i + 1 %> of 5
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title"><%= gitData[i].name %></h5>
+                    <p class="card-text"><%= gitData[i].description %></p>
+                    <a href="<%= gitData[i].html_url %>" target='_blank' class="btn btn-primary">Visit Repository</a>
+                </div>
+            </div>
+        </div>
+        <% } %>
+    </div>
+</div>
