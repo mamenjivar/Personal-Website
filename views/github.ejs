@@ -1,17 +1,19 @@
 <%- include('partials/header'); %>
 
 <!-- about page section -->
-<div class='container text-center'>
+<div class='container text-center py-3'>
+    <i class="fab fa-github fa-10x"></i>
     <h1>Github Repository Page</h1>
     <p>In this page, you will see the various projects in this particular repository</p>
-    <!-- ADD BUTTON TO GO DIRECTLY TO PROFILE  -->
+    <a href='/api' class='btn btn-primary'>Go back</a>
+    <!-- find combination for buttons to make more sense -->
+    <a href='https://github.com/mamenjivar' target="_blank" class='btn btn-primary'>Go to Github Profile <i class="fab fa-github"></i></a>
 </div>
 
 <!-- long cards with repos -->
-<!-- LOOPS 10 ONLY -->
+<!-- LOOPS 5 ONLY -->
 <div class='container'>
     <div class='row d-flex justify-content-around'>
-        <!-- let = var -->
         <% for(let i = 0; i < 5; i++) { %>
         <div class='col-md-5 pb-3'>
             <div class="card">
@@ -28,3 +30,5 @@
         <% } %>
     </div>
 </div>
+
+<%- include('partials/footer'); %>  

@@ -61,8 +61,6 @@ router.get('/api/github', function(req, res){
         console.log(err.message);
         res.status(500).send('Server Error (github)');
     }
-
-    // res.render('github');
 });
 
 // to display resume for people to see and download
