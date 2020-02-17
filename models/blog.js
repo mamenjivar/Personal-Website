@@ -1,7 +1,7 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
 // MONGOOSE SCHEMA - DATABASE FORMAT
-var blogSchema = new mongoose.Schema({
+const blogSchema = new mongoose.Schema({
     title: String,
     author: String,
     body: String,
